@@ -51,7 +51,7 @@
 #ifdef DEFAULTS_RAMPS_BOARD
   // 4, 5 & 6 axis support only for RAMPS 1.4 (for the moment :-)...)
   #define N_AXIS 5            // Number of axes
-  #define N_AXIS_LINEAR 3     // Number of linears axis
+  #define N_AXIS_LINEAR 5     // Number of linears axis
 #else
   #define N_AXIS 3 // Number of axes = 3 if not DEFAULTS_RAMPS_BOARD
 #endif
@@ -68,11 +68,11 @@
 #endif
 #if N_AXIS > 3
   #define AXIS_4 3
-  #define AXIS_4_NAME 'A' // Letter of axis number 4
+  #define AXIS_4_NAME 'X' // Letter of axis number 4
 #endif
 #if N_AXIS > 4
   #define AXIS_5 4
-  #define AXIS_5_NAME 'B' // Letter of axis number 5
+  #define AXIS_5_NAME 'Y' // Letter of axis number 5
 #endif
 #if N_AXIS > 5
   #define AXIS_6 5
@@ -181,13 +181,17 @@
     #define HOMING_CYCLE_1 (1<<AXIS_4) // Home 4th axis (A)
     #define HOMING_CYCLE_2 (1<<AXIS_1) // Home X axis
     #define HOMING_CYCLE_3 (1<<AXIS_2) // Home Y axis
+  // #elif N_AXIS == 5 // 5 axis : homing
+  //   #define HOMING_CYCLE_0 (1<<AXIS_3) // Home Z axis first to clear workspace.
+  //   #define HOMING_CYCLE_1 ((1<<AXIS_1)|(1<<AXIS_2))     // OPTIONAL: uncomment to move X,Y at the same time.
+  //   #define HOMING_CYCLE_1 (1<<AXIS_1) // Home X axis  // OPTIONAL: uncomment to move only X at a time.
+  //   #define HOMING_CYCLE_2 (1<<AXIS_2) // Home Y axis  // OPTIONAL: uncomment to move only Y at a time.
+  //   #define HOMING_CYCLE_3 (1<<AXIS_4) // Home 4th axis (A)
+  //   #define HOMING_CYCLE_4 (1<<AXIS_5) // Home 5th axis (B)
   #elif N_AXIS == 5 // 5 axis : homing
     #define HOMING_CYCLE_0 (1<<AXIS_3) // Home Z axis first to clear workspace.
-    #define HOMING_CYCLE_1 ((1<<AXIS_1)|(1<<AXIS_2))     // OPTIONAL: uncomment to move X,Y at the same time.
-    //#define HOMING_CYCLE_1 (1<<AXIS_1) // Home X axis  // OPTIONAL: uncomment to move only X at a time.
-    //#define HOMING_CYCLE_2 (1<<AXIS_2) // Home Y axis  // OPTIONAL: uncomment to move only Y at a time.
-    //#define HOMING_CYCLE_3 (1<<AXIS_4) // Home 4th axis (A)
-    //#define HOMING_CYCLE_4 (1<<AXIS_5) // Home 5th axis (B)
+    #define HOMING_CYCLE_1 ((1<<AXIS_1)|(1<<AXIS_4)) // Home X axis
+    #define HOMING_CYCLE_2 ((1<<AXIS_2)|(1<<AXIS_5)) // Home Y axis
   #elif N_AXIS == 6 // 6 axis : homing
     #define HOMING_CYCLE_0 (1<<AXIS_3) // Home Z axis first to clear workspace.
     #define HOMING_CYCLE_1 (1<<AXIS_4) // Home 4th axis (A)
@@ -221,7 +225,7 @@
 // cycle is still invoked by the $H command. This is disabled by default. It's here only to address
 // users that need to switch between a two-axis and three-axis machine. This is actually very rare.
 // If you have a two-axis machine, DON'T USE THIS. Instead, just alter the homing cycle for two-axes.
-#define HOMING_SINGLE_AXIS_COMMANDS // Default disabled. Uncomment to enable.
+// #define HOMING_SINGLE_AXIS_COMMANDS // Default disabled. Uncomment to enable.
 
 // After homing, Grbl will set by default the entire machine space into negative space, as is typical
 // for professional CNC machines, regardless of where the limit switches are located. Uncomment this

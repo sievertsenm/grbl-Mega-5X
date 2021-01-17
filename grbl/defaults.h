@@ -483,9 +483,9 @@
   #define DEFAULT_AXIS1_ACCELERATION (50.0*60*60) // 300*60*60 mm/min^2 = 300 mm/sec^2
   #define DEFAULT_AXIS2_ACCELERATION (50.0*60*60) // 300*60*60 mm/min^2 = 300 mm/sec^2
   #define DEFAULT_AXIS3_ACCELERATION (50.0*60*60) // 100*60*60 mm/min^2 = 100 mm/sec^2
-  #define DEFAULT_AXIS1_MAX_TRAVEL 400.0 // mm
-  #define DEFAULT_AXIS2_MAX_TRAVEL 200.0 // mm
-  #define DEFAULT_AXIS3_MAX_TRAVEL 200.0 // mm
+  #define DEFAULT_AXIS1_MAX_TRAVEL 930.0 // mm
+  #define DEFAULT_AXIS2_MAX_TRAVEL 630.0 // mm
+  #define DEFAULT_AXIS3_MAX_TRAVEL 100.0 // mm
   #if N_AXIS > 3
     #if AXIS_4_NAME != AXIS_1_NAME && AXIS_4_NAME != AXIS_2_NAME && AXIS_4_NAME != AXIS_3_NAME
       #define DEFAULT_AXIS4_STEPS_PER_UNIT 8.888889 // Direct drive : (200 pas par tours * 1/16 microsteps)/360°
@@ -543,7 +543,7 @@
         AXIS_6_NAME != AXIS_3_NAME && AXIS_6_NAME != AXIS_4_NAME && AXIS_6_NAME != AXIS_5_NAME
       #define DEFAULT_AXIS6_STEPS_PER_UNIT 8.888889 // Direct drive : (200 pas par tours * 1/16 microsteps)/360°
       #define DEFAULT_AXIS6_MAX_RATE 1440 // °/mn
-      #define DEFAULT_AXIS6_ACCELERATION (50.0*60*60) // 100*60*60 mm/min^2 = 100 mm/sec^2
+      #define DEFAULT_AXIS6_ACCELERATION (100.0*60*60) // 100*60*60 mm/min^2 = 100 mm/sec^2
       #define DEFAULT_AXIS6_MAX_TRAVEL 180.0 // °
     #elif AXIS_6_NAME == AXIS_1_NAME
       #define DEFAULT_AXIS6_STEPS_PER_UNIT DEFAULT_AXIS1_STEPS_PER_UNIT
@@ -590,8 +590,8 @@
   #define DEFAULT_LASER_MODE 0 // false
   #define DEFAULT_HOMING_ENABLE 1 // true
   #define DEFAULT_HOMING_DIR_MASK 0 // move positive dir
-  #define DEFAULT_HOMING_FEED_RATE 100.0 // mm/min
-  #define DEFAULT_HOMING_SEEK_RATE 500.0 // mm/min
+  #define DEFAULT_HOMING_FEED_RATE 500.0 // mm/min
+  #define DEFAULT_HOMING_SEEK_RATE 2000.0 // mm/min
   #define DEFAULT_HOMING_DEBOUNCE_DELAY 250 // msec (0-65k)
   #define DEFAULT_HOMING_PULLOFF 5.0 // mm
 #endif
