@@ -460,16 +460,16 @@
   // CNC milling or laser cutting. Unlike Marlin, these defaults are only applied when the 
   // EEPROM is explicitly wiped, either by a `$RST=*` command or Grbl detecting a settings
   // version type change (not frequent).
-  #define MICROSTEPS_AXIS1 32     // Microstepping = 1/4 pas
-  #define STEP_REVS_AXIS1 6400    // Moteurs à 200 pas par tour
+  #define MICROSTEPS_AXIS1 4     // Microstepping = 1/4 pas
+  #define STEP_REVS_AXIS1 800    // Moteurs à 200 pas par tour
   #define UNIT_PER_REV_AXIS1 41.25 // 2mm
   #define DEFAULT_AXIS1_STEPS_PER_UNIT (MICROSTEPS_AXIS1*STEP_REVS_AXIS1/UNIT_PER_REV_AXIS1) // 400
-  #define MICROSTEPS_AXIS2 32     // Microstepping = 1/4 pas
-  #define STEP_REVS_AXIS2 6400    // Moteurs à 200 pas par tour
+  #define MICROSTEPS_AXIS2 4     // Microstepping = 1/4 pas
+  #define STEP_REVS_AXIS2 800    // Moteurs à 200 pas par tour
   #define UNIT_PER_REV_AXIS2 41.25 // 2mm
   #define DEFAULT_AXIS2_STEPS_PER_UNIT (MICROSTEPS_AXIS2*STEP_REVS_AXIS2/UNIT_PER_REV_AXIS2)
-  #define MICROSTEPS_AXIS3 32     // Microstepping = 1/4 pas
-  #define STEP_REVS_AXIS3 6400    // Moteurs à 200 pas par tour
+  #define MICROSTEPS_AXIS3 4     // Microstepping = 1/4 pas
+  #define STEP_REVS_AXIS3 800    // Moteurs à 200 pas par tour
   #define UNIT_PER_REV_AXIS3 8.0 // 2mm
   #define DEFAULT_AXIS3_STEPS_PER_UNIT (MICROSTEPS_AXIS3*STEP_REVS_AXIS3/UNIT_PER_REV_AXIS3)
   #define STEP_MAX_FREQUENCY 5000
