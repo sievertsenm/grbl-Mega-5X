@@ -460,26 +460,29 @@
   // CNC milling or laser cutting. Unlike Marlin, these defaults are only applied when the 
   // EEPROM is explicitly wiped, either by a `$RST=*` command or Grbl detecting a settings
   // version type change (not frequent).
-  #define MICROSTEPS_AXIS1 4     // Microstepping = 1/4 pas
-  #define STEP_REVS_AXIS1 800    // Moteurs à 200 pas par tour
-  #define UNIT_PER_REV_AXIS1 41.25 // 2mm
-  #define DEFAULT_AXIS1_STEPS_PER_UNIT (MICROSTEPS_AXIS1*STEP_REVS_AXIS1/UNIT_PER_REV_AXIS1) // 400
-  #define MICROSTEPS_AXIS2 4     // Microstepping = 1/4 pas
-  #define STEP_REVS_AXIS2 800    // Moteurs à 200 pas par tour
-  #define UNIT_PER_REV_AXIS2 41.25 // 2mm
-  #define DEFAULT_AXIS2_STEPS_PER_UNIT (MICROSTEPS_AXIS2*STEP_REVS_AXIS2/UNIT_PER_REV_AXIS2)
-  #define MICROSTEPS_AXIS3 4     // Microstepping = 1/4 pas
-  #define STEP_REVS_AXIS3 800    // Moteurs à 200 pas par tour
-  #define UNIT_PER_REV_AXIS3 8.0 // 2mm
-  #define DEFAULT_AXIS3_STEPS_PER_UNIT (MICROSTEPS_AXIS3*STEP_REVS_AXIS3/UNIT_PER_REV_AXIS3)
-  #define STEP_MAX_FREQUENCY 5000
-  #define SECONDS_PER_MINUTE 60
-  //#define DEFAULT_AXIS1_MAX_RATE 9000.0 // 9000 mm/min = 9000/60 = 150 mm/sec
-  #define DEFAULT_AXIS1_MAX_RATE (STEP_MAX_FREQUENCY/DEFAULT_AXIS1_STEPS_PER_UNIT*SECONDS_PER_MINUTE) // 3000
-  //#define DEFAULT_AXIS2_MAX_RATE 9000.0 // 9000 mm/min = 9000/60 = 150 mm/sec
-  #define DEFAULT_AXIS2_MAX_RATE (STEP_MAX_FREQUENCY/DEFAULT_AXIS2_STEPS_PER_UNIT*SECONDS_PER_MINUTE)
-  //#define DEFAULT_AXIS3_MAX_RATE 300.0  //  300 mm/min =  300/60 =   5 mm/sec
-  #define DEFAULT_AXIS3_MAX_RATE (STEP_MAX_FREQUENCY/DEFAULT_AXIS3_STEPS_PER_UNIT*SECONDS_PER_MINUTE)
+  // #define MICROSTEPS_AXIS1 32     // Microstepping = 1/4 pas
+  // #define STEP_REVS_AXIS1 800    // Moteurs à 200 pas par tour
+  // #define UNIT_PER_REV_AXIS1 41.25 // 2mm
+  // #define DEFAULT_AXIS1_STEPS_PER_UNIT (MICROSTEPS_AXIS1*STEP_REVS_AXIS1/UNIT_PER_REV_AXIS1) // 400
+  // #define MICROSTEPS_AXIS2 4     // Microstepping = 1/4 pas
+  // #define STEP_REVS_AXIS2 800    // Moteurs à 200 pas par tour
+  // #define UNIT_PER_REV_AXIS2 41.25 // 2mm
+  // #define DEFAULT_AXIS2_STEPS_PER_UNIT (MICROSTEPS_AXIS2*STEP_REVS_AXIS2/UNIT_PER_REV_AXIS2)
+  // #define MICROSTEPS_AXIS3 4     // Microstepping = 1/4 pas
+  // #define STEP_REVS_AXIS3 800    // Moteurs à 200 pas par tour
+  // #define UNIT_PER_REV_AXIS3 8.0 // 2mm
+  // #define DEFAULT_AXIS3_STEPS_PER_UNIT (MICROSTEPS_AXIS3*STEP_REVS_AXIS3/UNIT_PER_REV_AXIS3)
+  // #define STEP_MAX_FREQUENCY 5000
+  // #define SECONDS_PER_MINUTE 60
+  #define DEFAULT_AXIS1_STEPS_PER_UNIT 200.0
+  #define DEFAULT_AXIS2_STEPS_PER_UNIT 200.0
+  #define DEFAULT_AXIS3_STEPS_PER_UNIT 800.0
+  #define DEFAULT_AXIS1_MAX_RATE 3000.0 // 9000 mm/min = 9000/60 = 150 mm/sec
+  //#define DEFAULT_AXIS1_MAX_RATE (STEP_MAX_FREQUENCY/DEFAULT_AXIS1_STEPS_PER_UNIT*SECONDS_PER_MINUTE) // 3000
+  #define DEFAULT_AXIS2_MAX_RATE 3000.0 // 9000 mm/min = 9000/60 = 150 mm/sec
+  //#define DEFAULT_AXIS2_MAX_RATE (STEP_MAX_FREQUENCY/DEFAULT_AXIS2_STEPS_PER_UNIT*SECONDS_PER_MINUTE)
+  #define DEFAULT_AXIS3_MAX_RATE 1000.0  //  300 mm/min =  300/60 =   5 mm/sec
+  // #define DEFAULT_AXIS3_MAX_RATE (STEP_MAX_FREQUENCY/DEFAULT_AXIS3_STEPS_PER_UNIT*SECONDS_PER_MINUTE)
   #define DEFAULT_AXIS1_ACCELERATION (300.0*60*60) // 300*60*60 mm/min^2 = 300 mm/sec^2
   #define DEFAULT_AXIS2_ACCELERATION (300.0*60*60) // 300*60*60 mm/min^2 = 300 mm/sec^2
   #define DEFAULT_AXIS3_ACCELERATION (100.0*60*60) // 100*60*60 mm/min^2 = 100 mm/sec^2
