@@ -697,7 +697,7 @@
 // Enables a piecewise linear model of the spindle PWM/speed output. Requires a solution by the
 // 'fit_nonlinear_spindle.py' script in the /doc/script folder of the repo. See file comments
 // on how to gather spindle data and run the script to generate a solution.
-// #define ENABLE_PIECEWISE_LINEAR_SPINDLE  // Default disabled. Uncomment to enable.
+#define ENABLE_PIECEWISE_LINEAR_SPINDLE  // Default disabled. Uncomment to enable.
 
 // N_PIECES, RPM_MAX, RPM_MIN, RPM_POINTxx, and RPM_LINE_XX constants are all set and given by
 // the 'fit_nonlinear_spindle.py' script solution. Used only when ENABLE_PIECEWISE_LINEAR_SPINDLE
@@ -718,6 +718,20 @@
 // #define RPM_LINE_A4  1.203413e-01  // Used N_PIECES = 4. A and B constants of line 4.
 // #define RPM_LINE_B4  1.151360e+03
 
+#define N_PIECES 4
+#define RPM_MAX 12230
+#define RPM_MIN 536
+#define RPM_POINT12 2744.3
+#define RPM_POINT23 7853.3
+#define RPM_POINT34 11022.8
+#define RPM_LINE_A1 1.086906e-02
+#define RPM_LINE_B1 -5.017182e+01
+#define RPM_LINE_A2 1.370133e-02
+#define RPM_LINE_B2 -4.239917e+01
+#define RPM_LINE_A3 2.208582e-02
+#define RPM_LINE_B3 2.344688e+01
+#define RPM_LINE_A4 2.897265e-02
+#define RPM_LINE_B4 9.935880e+01
 
 /* ---------------------------------------------------------------------------------------
    OEM Single File Configuration Option
