@@ -361,7 +361,7 @@
   #if defined(SPINDLE_PWM_ON_D8)
 
     // Set Timer up to use TIMER4B which is attached to Digital Pin 8 - Ramps 1.4 12v output with heat sink
-    #define SPINDLE_PWM_MAX_VALUE     782.0 // Translates to about 1.9 kHz PWM frequency at 1/8 prescaler
+    #define SPINDLE_PWM_MAX_VALUE     1024.0 // Translates to about 1.9 kHz PWM frequency at 1/8 prescaler
     #ifndef SPINDLE_PWM_MIN_VALUE
       #define SPINDLE_PWM_MIN_VALUE   1   // Must be greater than zero.
     #endif
@@ -390,7 +390,7 @@
     // Set Timer up to use TIMER4C which is attached to Digital Pin 6 - Ramps Servo 2
     #define SPINDLE_PWM_MAX_VALUE     255.0 // Translates to about 1.9 kHz PWM frequency at 1/8 prescaler
     #ifndef SPINDLE_PWM_MIN_VALUE
-      #define SPINDLE_PWM_MIN_VALUE   1   // Must be greater than zero.
+      #define SPINDLE_PWM_MIN_VALUE   56   // Must be greater than zero.
     #endif
     #define SPINDLE_PWM_OFF_VALUE     0
     #define SPINDLE_PWM_RANGE         (SPINDLE_PWM_MAX_VALUE-SPINDLE_PWM_MIN_VALUE)
